@@ -15,7 +15,7 @@ def main():
     args = parser.parse_args()
 
     try:
-        with open(args.file, "r") as f:
+        with open(args.file, "r", encoding="utf-8") as f:
             data = f.read()
     except FileNotFoundError:
         print("Error: File not found.")
